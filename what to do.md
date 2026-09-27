@@ -10,3 +10,8 @@ or
 
 eval $(floci env)
 export DYNAMODB_ENDPOINT=http://localhost:4566
+
+
+
+aws dynamodb create-table --table-name Links --attribute-definitions AttributeName=higest_key,AttributeType=S --key-schema AttributeName=higest_key,KeyType=HASH --billing-mode PAY_PER_REQUEST \
+--endpoint-url http://localhost:4566
